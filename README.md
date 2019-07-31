@@ -15,3 +15,5 @@ Example code for optimized the current consumption with FreeRTOS
 * Power Profile Kit
 * Nordic NRF5 SDK 15.2
 * IDE : Segger Embedded Studio
+
+For the details (particular on the current consumption profile), you can find at https://jimmywongbluetooth.wordpress.com/2019/07/31/current-consumption-with-freertos-on-nordic-nrf5-sdk/.
