@@ -106,7 +106,10 @@ static void app_timer_callback(TimerHandle_t xTimer)
     ASSERT(pinfo->func != NULL);
 
     if (pinfo->active)
+    {
+        pinfo->active = false;
         pinfo->func(pinfo->argument);
+    }
 }
 
 
@@ -168,7 +171,7 @@ uint32_t app_timer_start(app_timer_id_t timer_id, uint32_t timeout_ticks, void *
     {
         return NRF_ERROR_INVALID_STATE;
     }
-    if (pinfo->active && (xTimerIsTimerActive(hTimer) != pdFALSE))
+    if (pinfo->active)
     {
         // Timer already running - exit silently
         return NRF_SUCCESS;
@@ -179,6 +182,7 @@ uint32_t app_timer_start(app_timer_id_t timer_id, uint32_t timeout_ticks, void *
     if (__get_IPSR() != 0)
     {
         BaseType_t yieldReq = pdFALSE;
+
         if (xTimerChangePeriodFromISR(hTimer, timeout_ticks, &yieldReq) != pdPASS)
         {
             return NRF_ERROR_NO_MEM;
@@ -193,6 +197,12 @@ uint32_t app_timer_start(app_timer_id_t timer_id, uint32_t timeout_ticks, void *
     }
     else
     {
+        if (xTimerIsTimerActive(hTimer) != pdFALSE)
+        {
+            // Timer already running - exit silently
+            return NRF_SUCCESS;
+        }
+
         if (xTimerChangePeriod(hTimer, timeout_ticks, APP_TIMER_WAIT_FOR_QUEUE) != pdPASS)
         {
             return NRF_ERROR_NO_MEM;
