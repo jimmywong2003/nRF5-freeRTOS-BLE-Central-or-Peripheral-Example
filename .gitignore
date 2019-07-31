@@ -6,6 +6,10 @@
 *.ko
 *.obj
 *.elf
+*.asm
+*.ind
+*.ld
+*.jlink
 
 # Linker output
 *.ilk
