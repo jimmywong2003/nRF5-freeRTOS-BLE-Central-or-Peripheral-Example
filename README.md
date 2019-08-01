@@ -6,6 +6,7 @@ Example code for optimized the current consumption with FreeRTOS
 * ble_app_hrs_freertos -- original native example from NRF5 SDK by enable the DCDC
 * ble_app_nus_bas_dis_with_bonding_freeRTOS -- Nordic UART Service + Battery Service (with optimized SAADC measurement) + Device Information System with Peer Manager 
 * ble_app_multiple_nus_c_freeRTOS -- BLE Multiple Central Role with NUS Client x 2 with FreeRTOS
+* ble_app_multiple_nus_c_freeRTOS_cli_flash -- BLE Multiple Central Role with NUS Client x 2 with FreeRTOS + CLI (Command Line Inteface)
 
 
 ## Requirement
