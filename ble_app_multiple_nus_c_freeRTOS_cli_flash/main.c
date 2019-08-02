@@ -228,6 +228,28 @@ NRF_CLI_CREATE_STATIC_SUBCMD_SET(led_commands)
 
 NRF_CLI_CMD_REGISTER(led, &led_commands, "Commands for LED control", default_cmd);
 
+
+static void cmd_writeflash(nrf_cli_t const * p_cli, size_t argc, char **argv)
+{
+    UNUSED_PARAMETER(argc);
+    UNUSED_PARAMETER(argv);
+
+    if (nrf_cli_help_requested(p_cli))
+    {
+        nrf_cli_help_print(p_cli, NULL, 0);
+        return;
+    }
+
+//     NRF_LOG_WARNING("0123456789ABCED");
+//     NRF_LOG_INFO("INFO TESTING");
+
+   uint32_t err_code = NRF_ERROR_NOT_FOUND;
+   APP_ERROR_CHECK(err_code);
+}
+
+NRF_CLI_CMD_REGISTER(writeflash, NULL, "Write flash test.", cmd_writeflash);
+
+
 // NRF_CLI_CMD_REGISTER(freertos, &freertos_commands, "FreeRTOS statistic", default_cmd);
 
 static void cli_task(void * p_context)
@@ -277,6 +299,8 @@ void vApplicationStackOverflowHook( xTaskHandle *pxTask, signed portCHAR *pcTask
 {
         NRF_LOG_INFO("Task %s: Stack Overflow", pcTaskName);
 
+        NRF_LOG_ERROR("%s", pcTaskName); // --> sd_fstorage_sd --> write flash
+
         for(;; );
 }
 
@@ -290,7 +314,6 @@ void vApplicationTickHook(void)
 
         if (m_log_task_is_running)
                 m_log_task_count++;
-
 }
 
 /**@brief A function which is hooked to idle task.
@@ -303,7 +326,6 @@ void vApplicationIdleHook( void )
 #endif
         vTaskResume(m_cli_task);
 }
-
 
 /**@brief Callback function for asserts in the SoftDevice.
  *
@@ -321,7 +343,6 @@ void assert_nrf_callback(uint16_t line_num, const uint8_t * p_file_name)
         app_error_handler(DEAD_BEEF, line_num, p_file_name);
 }
 
-
 static void flashlog_init(void)
 {
         ret_code_t ret;
@@ -330,7 +351,7 @@ static void flashlog_init(void)
         ret = nrf_log_backend_flash_init(&nrf_fstorage_sd);
         APP_ERROR_CHECK(ret);
 
-        backend_id = nrf_log_backend_add(&m_flash_log_backend, NRF_LOG_SEVERITY_ERROR);
+        backend_id = nrf_log_backend_add(&m_flash_log_backend, NRF_LOG_SEVERITY_WARNING);
         APP_ERROR_CHECK_BOOL(backend_id >= 0);
 
         backend_id = nrf_log_backend_add(&m_crash_log_backend, NRF_LOG_SEVERITY_ERROR);
@@ -1118,17 +1139,16 @@ int main(void)
         nus_c_init();
         ble_conn_state_init();
 
-
-
         application_timers_start();
 
         // Create a FreeRTOS task for the BLE stack.
         // The task will run advertising_start() before entering its loop.
         nrf_sdh_freertos_init(scan_start, NULL);
 
+        flashlog_init();
         NRF_LOG_INFO("BLE Central NUS x 2 with FreeRTOS.");
 
-        flashlog_init();
+
 
         // Start FreeRTOS scheduler.
         vTaskStartScheduler();
