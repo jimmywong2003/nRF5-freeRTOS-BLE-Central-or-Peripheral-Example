@@ -279,10 +279,11 @@ static void log_msg_queue_process(nrf_queue_t const * p_queue, bool fstorage_blo
 
         m_curr_len = sizeof(m_flash_buf);
 	
-        //Jimmy (patch of the flash if full) - 2019-08-02
-        nrf_memobj_put(p_msg);
+
         if (!msg_to_buf(p_msg, (uint8_t *)m_flash_buf, &m_curr_len))
         {
+            //Jimmy (patch of the flash if full) - 2019-08-02
+            nrf_memobj_put(p_msg);
             continue;
         }
 
