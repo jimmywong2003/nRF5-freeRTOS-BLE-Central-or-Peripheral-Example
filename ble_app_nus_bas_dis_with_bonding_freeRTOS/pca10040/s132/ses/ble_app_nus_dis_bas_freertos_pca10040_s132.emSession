@@ -72,7 +72,7 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1083" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="0" top="1069" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1083" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="1063" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/softdevice/common/nrf_sdh_freertos.c" selected="0" top="63" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="18" useTextEdit="1" useBinaryEdit="0" left="0" path="ble_app_nus_dis_bas_freertos_pca10040_s132.emProject" selected="0" top="18" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="55" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../config/FreeRTOSConfig.h" selected="0" top="69" codecName="Default"/>
@@ -88,7 +88,7 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="41" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/src/nrfx_saadc.c" selected="0" top="18" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="302" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/ble/common/ble_srv_common.h" selected="0" top="286" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="104" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/ble/ble_services/ble_dis/ble_dis.h" selected="0" top="88" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="111" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../modified_components/libraries/timer/app_timer_freertos.c" selected="1" top="93" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="111" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../modified_components/libraries/timer/app_timer_freertos.c" selected="0" top="93" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="ble_app_nus_dis_bas_freertos_pca10040_s132" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" debugSearchFileMap="" fileDialogInitialDirectory="C:/Dropbox (Personal)/Nordic/SDK15.2/github/nRF5-freeRTOS-current-optimization/modified_components/softdevice/common" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

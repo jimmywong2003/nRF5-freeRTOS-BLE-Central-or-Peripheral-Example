@@ -3338,10 +3338,13 @@ static void nrf_log_backend_cli_flush(nrf_log_backend_t const * p_backend)
     nrf_cli_t const *       p_cli = p_backend_cli->p_cli;
     nrf_log_entry_t *       p_msg;
 
+#if 0
     if (nrf_queue_pop(p_backend_cli->p_queue, &p_msg) == NRF_SUCCESS)
     {
         (void)cli_log_entry_process(p_cli, false);
     }
+#endif	
+	(void)cli_log_entry_process(p_cli, true);
     UNUSED_PARAMETER(p_backend);
 }
 

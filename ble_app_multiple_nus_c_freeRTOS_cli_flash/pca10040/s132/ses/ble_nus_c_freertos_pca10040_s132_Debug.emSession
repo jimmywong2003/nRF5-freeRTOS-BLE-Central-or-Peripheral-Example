@@ -27,6 +27,7 @@
   <ProjectSessionItem path="ble_nus_c_freertos_pca10040_s132_Debug;ble_nus_c_freertos_pca10040_s132_Debug;Board Definition"/>
   <ProjectSessionItem path="ble_nus_c_freertos_pca10040_s132_Debug;ble_nus_c_freertos_pca10040_s132_Debug;Board Support"/>
   <ProjectSessionItem path="ble_nus_c_freertos_pca10040_s132_Debug;ble_nus_c_freertos_pca10040_s132_Debug;CLI Module"/>
+  <ProjectSessionItem path="ble_nus_c_freertos_pca10040_s132_Debug;ble_nus_c_freertos_pca10040_s132_Debug;Modified BLE_Services"/>
   <ProjectSessionItem path="ble_nus_c_freertos_pca10040_s132_Debug;ble_nus_c_freertos_pca10040_s132_Debug;Modified nRF_Libraries"/>
   <ProjectSessionItem path="ble_nus_c_freertos_pca10040_s132_Debug;ble_nus_c_freertos_pca10040_s132_Debug;None"/>
   <ProjectSessionItem path="ble_nus_c_freertos_pca10040_s132_Debug;ble_nus_c_freertos_pca10040_s132_Debug;nRF_BLE"/>
@@ -59,8 +60,9 @@
  </TraceWindow>
  <Watch1>
   <Watches active="1" update="Never">
-   <Watchpoint numelements="0" expression="init" evalMode="0" name="init" radix="-1" linenumber="720" filename="../../../main.c" list=""/>
-   <Watchpoint numelements="0" expression="p_cli" evalMode="1" name="p_cli" radix="-1" linenumber="1086" filename="../../../main.c" list=""/>
+   <Watchpoint expression="init" name="init" radix="-1" linenumber="740" filename="../../../main.c"/>
+   <Watchpoint expression="p_cli" name="p_cli" radix="-1" linenumber="1106" filename="../../../main.c"/>
+   <Watchpoint expression="m_log_flash_fstorage" name="m_log_flash_fstorage" radix="-1" linenumber="522" filename="../../../../../../components/libraries/log/src/nrf_log_backend_flash.c"/>
   </Watches>
  </Watch1>
  <Watch2>
@@ -73,24 +75,28 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1077" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="0" top="1062" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="1105" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../main.c" selected="0" top="228" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="92" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../modified_components/softdevice/common/nrf_sdh_freertos.c" selected="0" top="92" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="53" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../modified_components/softdevice/common/nrf_sdh_freertos.h" selected="0" top="44" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="86" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../config/FreeRTOSConfig.h" selected="1" top="86" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="86" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../config/FreeRTOSConfig.h" selected="0" top="86" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="412" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../modified_external/freertos/source/tasks.c" selected="0" top="412" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="2669" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/cli/nrf_cli.c" selected="0" top="2669" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="7328" useTextEdit="1" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="7328" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="60" useTextEdit="1" useBinaryEdit="0" left="0" path="ble_nus_c_freertos_pca10040_s132_Debug.emProject" selected="0" top="60" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="85" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="3676" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/cli/nrf_cli.c" selected="0" top="3676" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="7583" useTextEdit="1" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="7583" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="3134" y="21" useTextEdit="1" useBinaryEdit="0" left="3021" path="ble_nus_c_freertos_pca10040_s132_Debug.emProject" selected="1" top="7" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="79" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/mdk/ses_startup_nrf52.s" selected="0" top="63" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/mdk/ses_startup_nrf_common.s" selected="0" top="96" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/log/src/nrf_log_str_formatter.c" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="495" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/log/src/nrf_log_backend_flash.c" selected="0" top="473" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="79" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/log/src/nrf_log_backend_flash.c" selected="0" top="79" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="163" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/fstorage/nrf_fstorage_nvmc.c" selected="0" top="163" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="50" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/log/nrf_log_types.h" selected="0" top="39" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="50" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/log/nrf_log_types.h" selected="0" top="50" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="48" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_handler_gcc.c" selected="0" top="40" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="12" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../modified_external/freertos/portable/GCC/nrf52/port.c" selected="0" top="12" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="62" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/boards/boards.c" selected="0" top="49" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="42" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/cli/cli_utils_cmds.c" selected="0" top="38" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="66" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../modified_components/softdevice/s132/headers/nrf_error.h" selected="0" top="43" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="941" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/log/src/nrf_log_frontend.c" selected="0" top="905" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" useBinaryEdit="0" left="0" path="../../../../modified_components/libraries/cli/cli_utils_cmds.c" selected="0" top="0" codecName="Default"/>
  </Files>
- <ARMCrossStudioWindow activeProject="ble_nus_c_freertos_pca10040_s132_Debug" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" debugSearchFileMap="" fileDialogInitialDirectory="C:/Dropbox (Personal)/Nordic/SDK15.2/github/nRF5-freeRTOS-current-optimization/ble_app_multiple_nus_c_freeRTOS_cli_flash/config" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <ARMCrossStudioWindow activeProject="ble_nus_c_freertos_pca10040_s132_Debug" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="C:/Dropbox (Personal)/Nordic/SDK15.2/github/nRF5-freeRTOS-current-optimization/ble_app_multiple_nus_c_freeRTOS_cli_flash/config" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>
